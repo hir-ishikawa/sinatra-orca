@@ -20,11 +20,11 @@ opt = {
   :host   => "192.168.4.123",
   :port   => "8000",
   :user   => "ormaster",
-  :passwd => "ormaster123",
+  :passwd => "ormaster123"
 }
 
 get '/' do
-  @patiens = list_patiens(HOST,PORT,USER,PASSWD)
+  @patients = list_patients(opt)
   haml :index
 end
 
