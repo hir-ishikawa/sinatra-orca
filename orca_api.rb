@@ -20,7 +20,7 @@ def list_patients(opt)
   </data>
   EOF
 
-  req.content_length body.size
+  req.content_length = body.size
   req.content_type = "application/xml"
   req.body = body
   req.basic_auth(opt[:user],opt[:passwd])
